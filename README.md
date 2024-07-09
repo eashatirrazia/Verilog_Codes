@@ -29,7 +29,8 @@ Distributed RAM is implemented using the lookup tables (LUTs) within the logic f
 
 **Code Structure**
 
-![image](https://github.com/eashatirrazia/Verilog_Codes/assets/110398766/a726ff35-196a-425a-bf75-bd42359923bc)
+![image](https://github.com/eashatirrazia/Verilog_Codes/assets/110398766/154519b8-43c7-4768-9c1e-d5be39a29492)
+
 
 
 
