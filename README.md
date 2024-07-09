@@ -1,5 +1,5 @@
 # Verilog_Codes
-A collection of fundamental Verilog modules needed for FPGA design in various applications
+A collection of fundamental Verilog modules needed for FPGA design in various applications.
 All codes have been tested in Vivado Design Suite on the board Diligent Nexus A750T (Xilinx Artix A750TCSG324).
 
 ## RAM
