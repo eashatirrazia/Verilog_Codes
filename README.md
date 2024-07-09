@@ -15,7 +15,8 @@ Block RAM (BRAM) is a type of memory block used in FPGAs to store data efficient
 
 **Code Structure**
 
-![image](https://github.com/eashatirrazia/Verilog_Codes/assets/110398766/3c8d7709-8b50-4b7e-95fa-2ac1670ba80a)
+![image](https://github.com/eashatirrazia/Verilog_Codes/assets/110398766/e2737f9d-dae2-46fd-8953-8d917bcca544)
+
 
 
 ### Distributed RAM
@@ -28,6 +29,7 @@ Distributed RAM is implemented using the lookup tables (LUTs) within the logic f
 
 **Code Structure**
 
-![image](https://github.com/eashatirrazia/Verilog_Codes/assets/110398766/233047db-acdc-410d-95ae-34a5eb44fae7)
+![image](https://github.com/eashatirrazia/Verilog_Codes/assets/110398766/a726ff35-196a-425a-bf75-bd42359923bc)
+
 
 
