@@ -27,9 +27,26 @@ Distributed RAM is implemented using the lookup tables (LUTs) within the logic f
 * Flexible Memory Depth and Width: Easily configurable to suit various application needs. Two parameters are provided: DATA_WIDTH and ADDR_WIDTH.
 * Low Latency: Provides fast read and write operations due to its implementation within the FPGA fabric.
 
-**Code Structure**
+**Code Structure**ll
 
 ![image](https://github.com/eashatirrazia/Verilog_Codes/assets/110398766/154519b8-43c7-4768-9c1e-d5be39a29492)
+
+
+## BRAM to UART
+This project contains two fundamental modules, Read Controller and UART Transmitter integrated with Block Memory IP in Vivado Design Suite to test the retreival of data from the block memory bit by bit using UART transmission. Data is externally given to the BRAM IP in a coe format file. Common clock is given to both the modules and the BRAM IP. Block diagram is shown below to examine pin attachment.
+
+![State_Machine](https://github.com/user-attachments/assets/3bca606d-1f83-4787-ad3e-71402ddd7793)
+
+### Read Controller
+This module starts the system and provide BRAM with address and provide UART transmitter with valid signal needed to output the data bits. Its main function is to cater for the read latency, that is 2 clock cycles in our case, and send valid data to the transmitter. A state machine overview of its algorithm is shown below.
+
+![State_Machine_Controller](https://github.com/user-attachments/assets/993a6a27-5fe5-4904-af98-4dd5e79b451d)
+
+### UART Transmitter
+The UART Transmitter module is designed to serialize parallel data and transmit it over a serial line in compliance with the UART protocol. This implementation supports configurable baud rate, and clock frequency, making it adaptable for various communication requirements. A state machine overview of its algorithm is shown below.
+
+
+![State_Machine_Uart](https://github.com/user-attachments/assets/e2009a06-49cd-433f-9c28-724d5fca85bc)
 
 
 
