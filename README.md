@@ -32,6 +32,10 @@ Distributed RAM is implemented using the lookup tables (LUTs) within the logic f
 ![image](https://github.com/eashatirrazia/Verilog_Codes/assets/110398766/154519b8-43c7-4768-9c1e-d5be39a29492)
 
 
+
+
+
+
 ## BRAM to UART
 This project contains two fundamental modules, Read Controller and UART Transmitter integrated with Block Memory IP in Vivado Design Suite to test the retreival of data from the block memory bit by bit using UART transmission. Data is externally given to the BRAM IP in a coe format file. Common clock is given to both the modules and the BRAM IP. Block diagram is shown below to examine pin attachment.
 
@@ -45,9 +49,15 @@ This module starts the system and provide BRAM with address and provide UART tra
 ### UART Transmitter
 The UART Transmitter module is designed to serialize parallel data and transmit it over a serial line in compliance with the UART protocol. This implementation supports configurable baud rate, and clock frequency, making it adaptable for various communication requirements. A state machine overview of its algorithm is shown below.
 
-
 ![State_Machine_Uart](https://github.com/user-attachments/assets/e2009a06-49cd-433f-9c28-724d5fca85bc)
 
 
 
+
+
+
+## Radar Config Control
+The Radar Controller Configuration Project is designed to control and configure a radar system using a state machine approach. The project uses UART communication to send and receive data, enabling smooth and efficient control of the radar's operations. It handles different states, including initialization, Built-In Self-Test (BIST), RAM loading, and configuration, culminating in a done state that signals the successful setup of the radar controller.
+
+A state machine overview is shown below.
 
