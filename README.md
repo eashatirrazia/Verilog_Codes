@@ -61,3 +61,10 @@ The Radar Controller Configuration Project is designed to control and configure 
 
 A state machine overview is shown below.
 
+![state_machine_visio](https://github.com/user-attachments/assets/27f3f20f-053f-41a2-824d-e11c880df20b)
+
+The code structure is explained below with a comprehensive block diagram.
+
+![block_dia_visio](https://github.com/user-attachments/assets/30899f34-bcd7-4ff7-9176-87f29d35eb1c)
+
+
