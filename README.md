@@ -2,6 +2,10 @@
 A collection of fundamental Verilog modules needed for FPGA design in various applications.
 All codes have been tested in Vivado Design Suite on the board Diligent Nexus A750T (Xilinx Artix A750TCSG324).
 
+
+
+
+
 ## RAM
 ### Block RAM
 Block RAM (BRAM) is a type of memory block used in FPGAs to store data efficiently. This implementation demonstrates how to create a simple BRAM module in Verilog, which can be instantiated and used in various digital designs. Both read and write operations in BRAM are done synchronously.
@@ -67,4 +71,21 @@ The code structure is explained below with a comprehensive block diagram.
 
 ![block_dia_visio](https://github.com/user-attachments/assets/30899f34-bcd7-4ff7-9176-87f29d35eb1c)
 
+
+
+
+## FLAG GENERATOR
+This project contains a Verilog module named signal_gen that is responsible for generating control signals and an Ethernet input value based on a received data byte and a control signal (done). The module is designed to interface with a UART receiver, which provides the input data to be checked. When the done signal is asserted, the module checks the incoming data byte and sets specific output signals (bist_done, ram_done, config_done, load_done) and the ethernet_input value based on the data value received. These outputs are used to control various subsystems in a larger design, likely part of a Built-In Self-Test (BIST), RAM configuration, and loading operations.
+
+The block diagram for the module is shown below.
+
+
+
+
+## TRANSMITTER CONTROL
+This project contains a Verilog module named transmit_control designed to send a 64-bit (8-byte) packet of data via a UART transmitter. The module breaks down the 64-bit packet into smaller chunks of 8 bits (1 byte) and transmits them sequentially. Each state in the module's finite state machine (FSM) represents a specific part of the data being transmitted.
+
+The module interacts with the UART transmitter and manages the transmission process by generating the appropriate control signals (valid, data_out, and packet_done) based on the current state and the completion status of the transmission (tx_done).
+
+The block diagram is attached below.
 
