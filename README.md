@@ -77,8 +77,6 @@ The code structure is explained below with a comprehensive block diagram.
 ## FLAG GENERATOR
 This project contains a Verilog module named signal_gen that is responsible for generating control signals and an Ethernet input value based on a received data byte and a control signal (done). The module is designed to interface with a UART receiver, which provides the input data to be checked. When the done signal is asserted, the module checks the incoming data byte and sets specific output signals (bist_done, ram_done, config_done, load_done) and the ethernet_input value based on the data value received. These outputs are used to control various subsystems in a larger design, likely part of a Built-In Self-Test (BIST), RAM configuration, and loading operations.
 
-The block diagram for the module is shown below.
-
 
 
 
@@ -88,4 +86,15 @@ This project contains a Verilog module named transmit_control designed to send a
 The module interacts with the UART transmitter and manages the transmission process by generating the appropriate control signals (valid, data_out, and packet_done) based on the current state and the completion status of the transmission (tx_done).
 
 The block diagram is attached below.
+![Block_Diagram(transmitter_control)](https://github.com/user-attachments/assets/9fbd39f8-a4a8-4439-a799-f46fddac6edf)
+
+
+
+
+## CRC-64 Config Controller
+This project has similar working as the Radar Config Controller above. In this modifications are made to include CRC (Cyclic Redundancy Check) and convert the data sent in each state to 64-bits instead of 8-bits. This project utilizes the transmitter control to send 64-bit packet of data in 8-bits chunks via UART transmitter.
+
+The block diagram is shown below.
+![Visio_Block_Diagram(crc64_config_controller)](https://github.com/user-attachments/assets/3914cd90-0843-4fd9-8c54-b47d20faeb5f)
+
 
